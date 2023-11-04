@@ -1,0 +1,12 @@
+name: fingu-telegram
+services:
+  fingu-telegram-server:
+    image: fingu/telegram
+    build:
+      context: .
+      dockerfile: Dockerfile.alpha
+    ports:
+      - 8000:8000
+    # volumes:
+    #   - ./fingu-telegram:/app
+    restart: always
